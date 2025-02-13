@@ -23,10 +23,10 @@
 \pagestyle{empty}
 
 % Color definitions
-\definecolor{date}{HTML}{656565} 
-\definecolor{title}{HTML}{555555}
-\definecolor{firstname}{HTML}{777777}
-\definecolor{lastname}{HTML}{666666} 
+\definecolor{primary}{HTML}{000000}
+\definecolor{secondary}{HTML}{515151}
+\definecolor{firstname}{HTML}{555555}
+\definecolor{lastname}{HTML}{444444}
 
 % Personal information in title format.
 % More towards job applications highlighting your name and
@@ -39,7 +39,7 @@
     \color{lastname}{\fontseries{m}\selectfont #2}
   } \\[5pt]
   \centering{
-    \color{title}
+    \color{secondary}
     \fontsize{11pt}{14pt}\selectfont
     \href{mailto:#3}{\faEnvelope\ #3} \hspace{0.5em} | \hspace{0.5em}
     \ifx&#4&  % phone
@@ -50,7 +50,7 @@
     \href{#5}{\faLinkedin\ LinkedIn} \hspace{0.5em} | \hspace{0.5em}
     \href{#6}{\faGithub\ GitHub}
   }
-  \color{title}\rule{\linewidth}{0.4pt}
+  \color{secondary}\rule{\linewidth}{0.4pt}
   \vspace{-10pt}
 }
 
@@ -65,7 +65,7 @@
     \end{minipage}%
     \begin{minipage}[t]{0.4\textwidth}  % date ragged right
     \raggedleft
-    {\itshape \textcolor{date}{\today}}
+    {\itshape \textcolor{secondary}{\today}}
     \end{minipage}\\
     \ifx&#3&  % phone
     \else
@@ -102,7 +102,7 @@
     \else
       \begin{minipage}[t]{0.4\textwidth}
         \raggedleft
-        \itshape \textcolor{date}{#1}  % current date if provided
+        \itshape \textcolor{secondary}{#1}  % current date if provided
       \end{minipage}%
     \fi\\
     #4  % country
@@ -114,7 +114,7 @@
 \newcommand{\contenttitle}[1]{
   \noindent
   \begin{flushleft}
-    \normalsize \bfseries #1
+    {\color{primary}\normalsize \bfseries #1}
   \end{flushleft}
   \vspace{1em}
 }
@@ -123,7 +123,7 @@
 \newcommand{\content}[1]{
   \emergencystretch=2em
   \justifying
-  \noindent #1\par
+  {\color{primary}\noindent #1\par}
   \vspace{1.5em}
 }
 
@@ -132,12 +132,12 @@
 % there is no extra padding or margins around the signature.
 \newcommand{\signature}[3]{
   \begin{flushleft}
-    {\normalsize #1}\\
+    {\color{primary}\normalsize #1}\\
     \vspace{1em}
     \ifx&#2&
     \else
       \includegraphics[width=4cm]{#2}\\[0.5em]  % adjust the width if needed
     \fi
-    {\normalsize #3}
+    {\color{primary}\normalsize #3}
   \end{flushleft}
 }
