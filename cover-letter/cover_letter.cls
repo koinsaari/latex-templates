@@ -136,8 +136,8 @@
     \vspace{1em}
     \ifx&#2&
     \else
-      \includegraphics[width=4cm]{#2}\\[0.5em]  % adjust the width if needed
+      \includegraphics[width=5cm]{#2}\\[0.5em]  % adjust the width if needed
     \fi
-    {\color{primary}\normalsize #3}
+    {\color{primary}\normalsize \itshape #3}
   \end{flushleft}
 }

@@ -1,7 +1,7 @@
 # LaTeX Templates for CVs and Cover Letters
 
-This repository contains customizable LaTeX templates for creating professional CVs and cover letters.
+Customizable LaTeX templates for professional CVs and cover letters, inspired by [deedy-resume](https://github.com/deedy/Deedy-Resume).
 
 ## License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for more details.
+Licensed under the MIT License. See [LICENSE](LICENSE) for details.
